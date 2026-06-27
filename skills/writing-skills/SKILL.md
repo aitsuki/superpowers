@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: Use only when the user explicitly asks for Superpowers skill-writing guidance.
 ---
 
 # Writing Skills

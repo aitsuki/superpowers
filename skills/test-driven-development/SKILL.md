@@ -1,6 +1,6 @@
 ---
 name: test-driven-development
-description: Use when implementing any feature or bugfix, before writing implementation code
+description: Use only when the user explicitly asks for TDD or when a Superpowers plan explicitly requires TDD.
 ---
 
 # Test-Driven Development (TDD)

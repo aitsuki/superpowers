@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
+description: Use only when the user explicitly asks for the Superpowers branch-finishing workflow or another explicitly chosen Superpowers workflow requires it.
 ---
 
 # Finishing a Development Branch

@@ -1,6 +1,6 @@
 ---
 name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
+description: Load at session start only as a manual-skill catalog. Do not auto-invoke other skills; use a skill only when the user explicitly asks for that skill or for Superpowers workflow help.
 ---
 
 <SUBAGENT-STOP>
@@ -8,11 +8,15 @@ If you were dispatched as a subagent to execute a specific task, skip this skill
 </SUBAGENT-STOP>
 
 <EXTREMELY-IMPORTANT>
-If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.
+This fork uses Superpowers as an explicit opt-in toolkit.
 
-IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
+Do NOT invoke Superpowers skills implicitly. Do not invoke a skill merely
+because it might apply. Do not invoke a skill before answering a normal
+question, exploring a repository, or making a small code change.
 
-This is not negotiable. This is not optional. You cannot rationalize your way out of this.
+Use a Superpowers skill only when the user explicitly asks for it, names it, or
+asks for "Superpowers" workflow help. If the user asks for ordinary engineering
+work, follow the user's request directly.
 </EXTREMELY-IMPORTANT>
 
 ## Instruction Priority
@@ -20,8 +24,8 @@ This is not negotiable. This is not optional. You cannot rationalize your way ou
 Superpowers skills override default system prompt behavior, but **user instructions always take precedence**:
 
 1. **User's explicit instructions** (CLAUDE.md, GEMINI.md, AGENTS.md, direct requests) — highest priority
-2. **Superpowers skills** — override default system behavior where they conflict
-3. **Default system prompt** — lowest priority
+2. **Default system prompt and harness instructions**
+3. **Superpowers skills only after explicit user opt-in**
 
 If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "always use TDD," follow the user's instructions. The user is in control.
 
@@ -47,30 +51,32 @@ Skills speak in actions ("dispatch a subagent", "create a todo", "read a file") 
 
 ## The Rule
 
-**Invoke relevant or requested skills BEFORE any response or action.** Even a 1% chance a skill might apply means that you should invoke the skill to check. If an invoked skill turns out to be wrong for the situation, you don't need to use it.
+**Do not invoke skills automatically.** A skill is available only when the user
+explicitly opts into it. Good opt-in signals include:
+
+- "Use brainstorming"
+- "Use superpowers:writing-plans"
+- "Run the Superpowers workflow"
+- "Apply your planning skill"
+
+Weak relevance is not opt-in. "Let's build X", "fix this bug", "review this",
+or "what do you think?" are normal requests unless the user also asks for a
+Superpowers skill.
 
 ```dot
 digraph skill_flow {
     "User message received" [shape=doublecircle];
-    "About to enter plan mode?" [shape=doublecircle];
-    "Already brainstormed?" [shape=diamond];
-    "Invoke brainstorming skill" [shape=box];
-    "Might any skill apply?" [shape=diamond];
+    "Explicitly requested Superpowers skill?" [shape=diamond];
     "Invoke the skill" [shape=box];
     "Announce: 'Using [skill] to [purpose]'" [shape=box];
     "Has checklist?" [shape=diamond];
     "Create a todo per item" [shape=box];
     "Follow skill exactly" [shape=box];
-    "Respond (including clarifications)" [shape=doublecircle];
+    "Handle as normal request" [shape=doublecircle];
 
-    "About to enter plan mode?" -> "Already brainstormed?";
-    "Already brainstormed?" -> "Invoke brainstorming skill" [label="no"];
-    "Already brainstormed?" -> "Might any skill apply?" [label="yes"];
-    "Invoke brainstorming skill" -> "Might any skill apply?";
-
-    "User message received" -> "Might any skill apply?";
-    "Might any skill apply?" -> "Invoke the skill" [label="yes, even 1%"];
-    "Might any skill apply?" -> "Respond (including clarifications)" [label="definitely not"];
+    "User message received" -> "Explicitly requested Superpowers skill?";
+    "Explicitly requested Superpowers skill?" -> "Invoke the skill" [label="yes"];
+    "Explicitly requested Superpowers skill?" -> "Handle as normal request" [label="no"];
     "Invoke the skill" -> "Announce: 'Using [skill] to [purpose]'";
     "Announce: 'Using [skill] to [purpose]'" -> "Has checklist?";
     "Has checklist?" -> "Create a todo per item" [label="yes"];
@@ -81,22 +87,17 @@ digraph skill_flow {
 
 ## Red Flags
 
-These thoughts mean STOP—you're rationalizing:
+These thoughts mean STOP — you are about to over-apply Superpowers:
 
 | Thought | Reality |
 |---------|---------|
-| "This is just a simple question" | Questions are tasks. Check for skills. |
-| "I need more context first" | Skill check comes BEFORE clarifying questions. |
-| "Let me explore the codebase first" | Skills tell you HOW to explore. Check first. |
-| "I can check git/files quickly" | Files lack conversation context. Check for skills. |
-| "Let me gather information first" | Skills tell you HOW to gather information. |
-| "This doesn't need a formal skill" | If a skill exists, use it. |
-| "I remember this skill" | Skills evolve. Read current version. |
-| "This doesn't count as a task" | Action = task. Check for skills. |
-| "The skill is overkill" | Simple things become complex. Use it. |
-| "I'll just do this one thing first" | Check BEFORE doing anything. |
-| "This feels productive" | Undisciplined action wastes time. Skills prevent this. |
-| "I know what that means" | Knowing the concept ≠ using the skill. Invoke it. |
+| "This might benefit from brainstorming" | Ask normally or proceed normally unless the user requested brainstorming. |
+| "A skill exists for this" | Existence is not permission to invoke it. |
+| "The user asked for a feature, so brainstorming applies" | Feature requests are normal work unless the user opted into the workflow. |
+| "TDD would be healthier here" | Follow the user's testing preference and repo norms unless they requested TDD. |
+| "Subagents would improve quality" | Offer choices only when asked for Superpowers workflow help. |
+| "A plan file exists, so use subagent-driven development" | Ask or follow the user's selected execution mode. |
+| "I should create a worktree first" | Do not create worktrees unless the user explicitly asks. |
 
 ## Skill Priority
 
@@ -105,12 +106,13 @@ When multiple skills could apply, use this order:
 1. **Process skills first** (brainstorming, systematic-debugging) - these determine HOW to approach the task
 2. **Implementation skills second** (frontend-design, mcp-builder) - these guide execution
 
-"Let's build X" → brainstorming first, then implementation skills.
-"Fix this bug" → systematic-debugging first, then domain-specific skills.
+"Let's build X" → handle normally.
+"Fix this bug" → debug normally.
+"Use brainstorming for this feature" → invoke brainstorming.
 
 ## Skill Types
 
-**Rigid** (TDD, systematic-debugging): Follow exactly. Don't adapt away discipline.
+**Rigid** (TDD, systematic-debugging): Follow exactly after explicit opt-in.
 
 **Flexible** (patterns): Adapt principles to context.
 

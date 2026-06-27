@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+description: Use only when the user explicitly asks for systematic debugging or a Superpowers debugging workflow.
 ---
 
 # Systematic Debugging
