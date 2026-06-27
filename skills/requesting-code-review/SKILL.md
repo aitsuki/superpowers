@@ -1,6 +1,6 @@
 ---
 name: requesting-code-review
-description: Use only when the user explicitly asks for Superpowers code review or when another explicitly chosen Superpowers workflow requires it.
+description: Use only when the user explicitly asks for Powerset code review or when another explicitly chosen Powerset workflow requires it.
 ---
 
 # Requesting Code Review
@@ -57,7 +57,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 [Dispatch code reviewer subagent]
   DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
-  PLAN_OR_REQUIREMENTS: Task 2 from docs/superpowers/plans/deployment-plan.md
+  PLAN_OR_REQUIREMENTS: Task 2 from docs/powerset/plans/deployment-plan.md
   BASE_SHA: a7981ec
   HEAD_SHA: 3df7661
 

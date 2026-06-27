@@ -1,6 +1,6 @@
 ---
 name: dispatching-parallel-agents
-description: Use only when the user explicitly asks to use parallel agents or Superpowers parallel dispatch.
+description: Use only when the user explicitly asks to use parallel agents or Powerset parallel dispatch.
 ---
 
 # Dispatching Parallel Agents

@@ -1,6 +1,6 @@
 ---
 name: executing-plans
-description: Use only when the user explicitly chooses inline Superpowers plan execution.
+description: Use only when the user explicitly chooses inline Powerset plan execution.
 ---
 
 # Executing Plans
@@ -33,7 +33,7 @@ For each task:
 
 After all tasks complete and verified:
 - Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use superpowers:finishing-a-development-branch
+- **REQUIRED SUB-SKILL:** Use powerset:finishing-a-development-branch
 - Follow that skill to verify tests, present options, execute choice
 
 ## When to Stop and Ask for Help
@@ -65,6 +65,6 @@ After all tasks complete and verified:
 ## Integration
 
 **Required workflow skills:**
-- **superpowers:using-git-worktrees** - Optional only when the user explicitly asks for an isolated worktree
-- **superpowers:writing-plans** - Creates the plan this skill executes
-- **superpowers:finishing-a-development-branch** - Complete development after all tasks
+- **powerset:using-git-worktrees** - Optional only when the user explicitly asks for an isolated worktree
+- **powerset:writing-plans** - Creates the plan this skill executes
+- **powerset:finishing-a-development-branch** - Complete development after all tasks

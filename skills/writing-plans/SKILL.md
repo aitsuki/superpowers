@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Use only when the user explicitly asks for a Superpowers implementation plan or asks to use this skill for a multi-step task.
+description: Use only when the user explicitly asks for a Powerset implementation plan or asks to use this skill for a multi-step task.
 ---
 
 # Writing Plans
@@ -15,7 +15,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 
 **Context:** Work in the current checkout by default. Do not create a git worktree unless the user explicitly asks for one.
 
-**Save plans to:** `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
+**Save plans to:** `docs/powerset/plans/YYYY-MM-DD-<feature-name>.md`
 - (User preferences for plan location override this default)
 
 ## Scope Check
@@ -157,7 +157,7 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 After saving the plan, offer execution choice:
 
-**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Two execution options:**
+**"Plan complete and saved to `docs/powerset/plans/<filename>.md`. Two execution options:**
 
 **1. Inline Execution (recommended)** - I execute tasks in this session using the current checkout and normal verification
 
@@ -166,9 +166,9 @@ After saving the plan, offer execution choice:
 **Which approach?"**
 
 **If Subagent-Driven chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development
+- **REQUIRED SUB-SKILL:** Use powerset:subagent-driven-development
 - Fresh subagent per task + two-stage review
 
 **If Inline Execution chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
+- **REQUIRED SUB-SKILL:** Use powerset:executing-plans
 - Batch execution with checkpoints for review

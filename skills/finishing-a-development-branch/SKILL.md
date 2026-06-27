@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Use only when the user explicitly asks for the Superpowers branch-finishing workflow or another explicitly chosen Superpowers workflow requires it.
+description: Use only when the user explicitly asks for the Powerset branch-finishing workflow or another explicitly chosen Powerset workflow requires it.
 ---
 
 # Finishing a Development Branch
@@ -170,7 +170,7 @@ WORKTREE_PATH=$(git rev-parse --show-toplevel)
 
 **If `GIT_DIR == GIT_COMMON`:** Normal repo, no worktree to clean up. Done.
 
-**If worktree path is under `.worktrees/` or `worktrees/`:** Superpowers created this worktree — we own cleanup.
+**If worktree path is under `.worktrees/` or `worktrees/`:** Powerset created this worktree — we own cleanup.
 
 ```bash
 MAIN_ROOT=$(git -C "$(git rev-parse --git-common-dir)/.." rev-parse --show-toplevel)

@@ -1,20 +1,25 @@
-# Ensure shell scripts always have LF line endings
-.gitattributes text eol=lf
+# Ensure text files keep LF line endings.
+* text=auto eol=lf
+
+# Shell and hook entrypoints must stay executable-friendly on Unix.
 *.sh text eol=lf
 hooks/session-start text eol=lf
 hooks/session-start-codex text eol=lf
+skills/subagent-driven-development/scripts/* text eol=lf
 
-# Ensure the polyglot wrapper keeps LF (it's parsed by both cmd and bash)
+# The polyglot wrapper is parsed by both cmd and bash.
 *.cmd text eol=lf
 
-# Common text files
+# Common text files.
+.gitignore text eol=lf
+*.html text eol=lf
 *.md text eol=lf
 *.json text eol=lf
 *.js text eol=lf
 *.mjs text eol=lf
 *.ts text eol=lf
 
-# Explicitly mark binary files
+# Explicitly mark binary files.
 *.png binary
 *.jpg binary
 *.gif binary

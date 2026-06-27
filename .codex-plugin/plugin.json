@@ -25,7 +25,7 @@
   "interface": {
     "displayName": "Powerset",
     "shortDescription": "Opt-in planning and workflow skills for Codex",
-    "longDescription": "A personal fork of Superpowers, now published as Powerset, tuned for explicit skill use: no implicit skill activation, inline plan execution by default, no automatic git worktrees, and TDD only when requested.",
+    "longDescription": "A personal Powerset skill toolkit tuned for explicit skill use: no implicit skill activation, inline plan execution by default, no automatic git worktrees, and TDD only when requested.",
     "developerName": "aitsuki",
     "category": "Coding",
     "capabilities": [

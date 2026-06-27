@@ -1,6 +1,6 @@
 ---
 name: receiving-code-review
-description: Use only when the user explicitly asks for the Superpowers review-feedback workflow.
+description: Use only when the user explicitly asks for the Powerset review-feedback workflow.
 ---
 
 # Code Review Reception

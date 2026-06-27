@@ -1,6 +1,6 @@
 ---
 name: verification-before-completion
-description: Use only when explicitly requested or required by another explicitly chosen Superpowers workflow; verifies commands before success claims.
+description: Use only when explicitly requested or required by another explicitly chosen Powerset workflow; verifies commands before success claims.
 ---
 
 # Verification Before Completion

@@ -14,7 +14,7 @@
 
 - 不因为“可能适用”就调用 skill
 - 不在普通提问、读代码、小改动前自动进入 workflow
-- 只有用户明确说“使用 brainstorming”“使用 Superpowers workflow”“用某个 skill”时才启用
+- 只有用户明确说“使用 brainstorming”“使用 Powerset workflow”“用某个 skill”时才启用
 
 普通请求仍按普通工程任务处理。
 
@@ -47,7 +47,7 @@
 这个 fork 改成：
 
 - 只有用户明确要求 TDD 时才启用
-- 或者某份显式选择的 Superpowers 计划明确要求 TDD 时才启用
+- 或者某份显式选择的 Powerset 计划明确要求 TDD 时才启用
 - 普通实现任务遵循项目现有测试习惯和用户偏好
 
 ## 推荐使用方式
@@ -61,7 +61,7 @@
 ```
 
 ```text
-使用 superpowers:writing-plans，把这份规格文档拆成实现计划。
+使用 powerset:writing-plans，把这份规格文档拆成实现计划。
 ```
 
 ```text
@@ -82,7 +82,7 @@
 帮我修一下这个 bug。
 ```
 
-agent 应该直接按普通调试任务处理，而不是自动进入 Superpowers workflow。
+agent 应该直接按普通调试任务处理，而不是自动进入 Powerset workflow。
 
 ## 主要 skill
 
@@ -95,7 +95,7 @@ agent 应该直接按普通调试任务处理，而不是自动进入 Superpower
 ### 实现和审查
 
 - `subagent-driven-development`：显式选择后，用子代理逐任务实现和审查
-- `requesting-code-review`：请求 Superpowers 风格代码审查
+- `requesting-code-review`：请求 Powerset 风格代码审查
 - `receiving-code-review`：处理代码审查反馈
 - `verification-before-completion`：完成前做验证
 - `finishing-a-development-branch`：完成分支后的合并/PR/保留/丢弃选择
@@ -109,8 +109,8 @@ agent 应该直接按普通调试任务处理，而不是自动进入 Superpower
 
 - `using-git-worktrees`：显式要求时创建或检查 git worktree
 - `dispatching-parallel-agents`：显式要求时并行派发子代理
-- `writing-skills`：编写或修改 Superpowers skill
-- `using-superpowers`：会话启动时注入的 skill 使用规则
+- `writing-skills`：编写或修改 Powerset skill
+- `using-powerset`：会话启动时注入的 skill 使用规则
 
 ## Codex 插件说明
 
@@ -121,7 +121,7 @@ Codex 插件入口在：
 - `hooks/session-start-codex`
 - `skills/`
 
-`hooks/session-start-codex` 仍会把 `using-superpowers` 注入上下文，但注入内容已经改成中文个人版的核心规则：Superpowers 是显式 opt-in 工具箱，不自动调用其他 skill。
+`hooks/session-start-codex` 会把 `using-powerset` 注入上下文，注入内容是中文个人版的核心规则：Powerset 是显式 opt-in 工具箱，不自动调用其他 skill。
 
 Codex 插件 manifest 中的名称是：
 
@@ -152,12 +152,6 @@ https://github.com/aitsuki/powerset-marketplace
 ```
 
 ## 本地验证
-
-可运行 hook 测试确认 session-start 输出仍是合法 JSON：
-
-```bash
-bash tests/hooks/test-session-start.sh
-```
 
 检查 diff 中是否有空白问题：
 

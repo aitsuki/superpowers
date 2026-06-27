@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Use only when the user explicitly asks for Superpowers skill-writing guidance.
+description: Use only when the user explicitly asks for Powerset skill-writing guidance.
 ---
 
 # Writing Skills
@@ -9,13 +9,13 @@ description: Use only when the user explicitly asks for Superpowers skill-writin
 
 **Writing skills IS Test-Driven Development applied to process documentation.**
 
-**Personal skills live in your runtime's skills directory** — see [claude-code-tools.md](../using-superpowers/references/claude-code-tools.md) or [codex-tools.md](../using-superpowers/references/codex-tools.md) for the path on your runtime.
+**Personal skills live in your runtime's skills directory** — see [claude-code-tools.md](../using-powerset/references/claude-code-tools.md) or [codex-tools.md](../using-powerset/references/codex-tools.md) for the path on your runtime.
 
 You write test cases (pressure scenarios with subagents), watch them fail (baseline behavior), write the skill (documentation), watch tests pass (agents comply), and refactor (close loopholes).
 
 **Core principle:** If you didn't watch an agent fail without the skill, you don't know if the skill teaches the right thing.
 
-**REQUIRED BACKGROUND:** You MUST understand superpowers:test-driven-development before using this skill. That skill defines the fundamental RED-GREEN-REFACTOR cycle. This skill adapts TDD to documentation.
+**REQUIRED BACKGROUND:** You MUST understand powerset:test-driven-development before using this skill. That skill defines the fundamental RED-GREEN-REFACTOR cycle. This skill adapts TDD to documentation.
 
 **Official guidance:** For Anthropic's official skill authoring best practices, see anthropic-best-practices.md. This document provides additional patterns and guidelines that complement the TDD-focused approach in this skill.
 
@@ -280,8 +280,8 @@ wc -w skills/path/SKILL.md
 **When writing documentation that references other skills:**
 
 Use skill name only, with explicit requirement markers:
-- ✅ Good: `**REQUIRED SUB-SKILL:** Use superpowers:test-driven-development`
-- ✅ Good: `**REQUIRED BACKGROUND:** You MUST understand superpowers:systematic-debugging`
+- ✅ Good: `**REQUIRED SUB-SKILL:** Use powerset:test-driven-development`
+- ✅ Good: `**REQUIRED BACKGROUND:** You MUST understand powerset:systematic-debugging`
 - ❌ Bad: `See skills/testing/test-driven-development` (unclear if required)
 - ❌ Bad: `@skills/testing/test-driven-development/SKILL.md` (force-loads, burns context)
 
@@ -390,7 +390,7 @@ Edit skill without testing? Same violation.
 - Don't "adapt" while running tests
 - Delete means delete
 
-**REQUIRED BACKGROUND:** The superpowers:test-driven-development skill explains why this matters. Same principles apply to documentation.
+**REQUIRED BACKGROUND:** The powerset:test-driven-development skill explains why this matters. Same principles apply to documentation.
 
 ## Testing All Skill Types
 
