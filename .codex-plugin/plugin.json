@@ -1,14 +1,14 @@
 {
-  "name": "superpowers-lite",
+  "name": "powerset",
   "version": "6.0.3",
-  "description": "Opt-in Superpowers skills for Codex: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
+  "description": "Opt-in Powerset skills for Codex: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
   "author": {
     "name": "aitsuki",
     "email": "noreply@github.com",
     "url": "https://github.com/aitsuki"
   },
-  "homepage": "https://github.com/aitsuki/superpowers",
-  "repository": "https://github.com/aitsuki/superpowers",
+  "homepage": "https://github.com/aitsuki/powerset",
+  "repository": "https://github.com/aitsuki/powerset",
   "license": "MIT",
   "keywords": [
     "brainstorming",
@@ -23,9 +23,9 @@
   "skills": "./skills/",
   "hooks": "./hooks/hooks-codex.json",
   "interface": {
-    "displayName": "Superpowers Lite",
+    "displayName": "Powerset",
     "shortDescription": "Opt-in planning and workflow skills for Codex",
-    "longDescription": "A personal fork of Superpowers tuned for explicit skill use: no implicit skill activation, inline plan execution by default, no automatic git worktrees, and TDD only when requested.",
+    "longDescription": "A personal fork of Superpowers, now published as Powerset, tuned for explicit skill use: no implicit skill activation, inline plan execution by default, no automatic git worktrees, and TDD only when requested.",
     "developerName": "aitsuki",
     "category": "Coding",
     "capabilities": [
@@ -38,7 +38,7 @@
       "Use writing-plans to turn this spec into an implementation plan.",
       "Execute this plan inline without subagents or worktrees."
     ],
-    "websiteURL": "https://github.com/aitsuki/superpowers",
+    "websiteURL": "https://github.com/aitsuki/powerset",
     "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
     "brandColor": "#F59E0B",

@@ -1,14 +1,14 @@
 {
-  "name": "superpowers-lite-dev",
-  "description": "Development marketplace for the opt-in Superpowers Lite fork",
+  "name": "powerset-dev",
+  "description": "Development marketplace for the opt-in Powerset fork",
   "owner": {
     "name": "aitsuki",
     "email": "noreply@github.com"
   },
   "plugins": [
     {
-      "name": "superpowers-lite",
-      "description": "Opt-in Superpowers skills: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
+      "name": "powerset",
+      "description": "Opt-in Powerset skills: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
       "version": "6.0.3",
       "source": "./",
       "author": {

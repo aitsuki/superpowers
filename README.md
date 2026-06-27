@@ -1,6 +1,6 @@
-# Superpowers Lite 中文个人版
+# Powerset 中文个人版
 
-这是基于 [obra/superpowers](https://github.com/obra/superpowers) 的个人 fork。插件标识改为 `superpowers-lite`，避免和 Codex/Claude 内置或官方 marketplace 中的 `superpowers` 插件混淆。
+这是基于 [obra/superpowers](https://github.com/obra/superpowers) 的个人 fork，现已改名为 `powerset`。插件标识改为 `powerset`，避免和 Codex/Claude 内置或官方 marketplace 中的 `superpowers` 插件混淆。
 
 原版 Superpowers 是一套偏强约束的软件开发工作流：自动触发 brainstorming、TDD、worktree、子代理驱动开发和多轮审查。这个 fork 的目标相反：保留有用的 skill，但把它们改成明确、克制、按需启用的工具箱。
 
@@ -126,7 +126,7 @@ Codex 插件入口在：
 Codex 插件 manifest 中的名称是：
 
 ```text
-superpowers-lite
+powerset
 ```
 
 如果通过个人 marketplace 安装，优先使用这个名字，不要再用官方的 `superpowers` 标识。
@@ -136,19 +136,19 @@ superpowers-lite
 配套 marketplace 仓库：
 
 ```text
-https://github.com/aitsuki/superpowers-lite-marketplace
+https://github.com/aitsuki/powerset-marketplace
 ```
 
 安装 marketplace：
 
 ```text
-/plugin marketplace add aitsuki/superpowers-lite-marketplace
+/plugin marketplace add aitsuki/powerset-marketplace
 ```
 
 安装插件：
 
 ```text
-/plugin install superpowers-lite@superpowers-lite-marketplace
+/plugin install powerset@powerset-marketplace
 ```
 
 ## 本地验证

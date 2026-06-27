@@ -1,13 +1,13 @@
 {
-  "name": "superpowers-lite",
-  "description": "Opt-in Superpowers skills: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
+  "name": "powerset",
+  "description": "Opt-in Powerset skills: explicit planning, inline execution by default, and no automatic worktrees or TDD.",
   "version": "6.0.3",
   "author": {
     "name": "aitsuki",
     "email": "noreply@github.com"
   },
-  "homepage": "https://github.com/aitsuki/superpowers",
-  "repository": "https://github.com/aitsuki/superpowers",
+  "homepage": "https://github.com/aitsuki/powerset",
+  "repository": "https://github.com/aitsuki/powerset",
   "license": "MIT",
   "keywords": [
     "skills",

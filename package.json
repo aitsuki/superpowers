@@ -1,7 +1,7 @@
 {
-  "name": "superpowers-lite",
+  "name": "powerset",
   "version": "6.0.3",
-  "description": "Opt-in Superpowers skills and runtime bootstrap for coding agents",
+  "description": "Opt-in Powerset skills and runtime bootstrap for coding agents",
   "type": "module",
   "main": ".opencode/plugins/superpowers.js",
   "keywords": [
