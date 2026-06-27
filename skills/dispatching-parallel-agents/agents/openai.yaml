@@ -1,0 +1,5 @@
+interface:
+  display_name: "Dispatching Parallel Agents"
+  short_description: "Split independent investigations or tasks across focused parallel agents."
+  default_prompt: "Use dispatching-parallel-agents to investigate these independent tasks in parallel."
+  allow_implicit_invocation: false

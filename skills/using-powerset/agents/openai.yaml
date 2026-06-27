@@ -1,0 +1,5 @@
+interface:
+  display_name: "Using Powerset"
+  short_description: "Load the Powerset manual-skill catalog and keep workflows explicitly opt-in."
+  default_prompt: "Use using-powerset to show me the available Powerset workflows and when to opt into them."
+  allow_implicit_invocation: false

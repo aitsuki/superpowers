@@ -1,0 +1,5 @@
+interface:
+  display_name: "Using Git Worktrees"
+  short_description: "Create or verify an isolated git worktree only when explicitly requested."
+  default_prompt: "Use using-git-worktrees to set up or verify an isolated workspace for this task."
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Requesting Code Review"
+  short_description: "Prepare focused reviewer context and request code review at useful checkpoints."
+  default_prompt: "Use requesting-code-review to request a focused review of my current changes."
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Executing Plans"
+  short_description: "Execute an approved implementation plan inline in the current session."
+  default_prompt: "Use executing-plans to implement this approved plan inline and verify each task."
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Receiving Code Review"
+  short_description: "Evaluate review feedback technically, verify claims, and implement sound changes."
+  default_prompt: "Use receiving-code-review to evaluate this feedback, verify it against the code, and apply valid fixes."
+  allow_implicit_invocation: false

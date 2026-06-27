@@ -1,0 +1,5 @@
+interface:
+  display_name: "Writing Skills"
+  short_description: "Create and test process skills with TDD-style pressure scenarios and refinement."
+  default_prompt: "Use writing-skills to help me design, test, and refine a new Powerset skill."
+  allow_implicit_invocation: false

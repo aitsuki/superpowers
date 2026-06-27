@@ -1,0 +1,5 @@
+interface:
+  display_name: "Writing Plans"
+  short_description: "Create detailed implementation plans with file mappings, task steps, and verification."
+  default_prompt: "Use writing-plans to turn this approved design into a detailed implementation plan."
+  allow_implicit_invocation: false

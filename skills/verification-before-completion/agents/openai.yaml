@@ -1,0 +1,5 @@
+interface:
+  display_name: "Verification Before Completion"
+  short_description: "Require fresh command evidence before claiming work is complete or passing."
+  default_prompt: "Use verification-before-completion to verify the work with fresh evidence before reporting completion."
+  allow_implicit_invocation: false

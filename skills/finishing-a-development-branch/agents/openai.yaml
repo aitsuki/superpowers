@@ -1,0 +1,5 @@
+interface:
+  display_name: "Finishing a Development Branch"
+  short_description: "Verify work, detect branch context, and guide merge, PR, keep, or discard options."
+  default_prompt: "Use finishing-a-development-branch to verify this work and help me choose how to finish the branch."
+  allow_implicit_invocation: false

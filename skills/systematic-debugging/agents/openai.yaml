@@ -1,0 +1,5 @@
+interface:
+  display_name: "Systematic Debugging"
+  short_description: "Find root cause before fixes using structured investigation, hypotheses, and verification."
+  default_prompt: "Use systematic-debugging to investigate this issue, find the root cause, and then implement a verified fix."
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Test-Driven Development"
+  short_description: "Use red-green-refactor with a failing test before production code changes."
+  default_prompt: "Use test-driven-development to implement this change with a failing test first, minimal code, and refactoring."
+  allow_implicit_invocation: false
